@@ -1150,26 +1150,6 @@ class Ui_MainWindow(object):
         self.label_single.setMinimumSize(QtCore.QSize(711, 371))
         self.label_single.setMaximumSize(QtCore.QSize(841, 501))
         self.label_single.setObjectName("label_single")
-        self.label_double_1 = QtWidgets.QLabel(self.centralwidget)
-        self.label_double_1.setGeometry(QtCore.QRect(40, 140, 731, 498))
-        self.label_double_1.setMinimumSize(QtCore.QSize(711, 371))
-        self.label_double_1.setMaximumSize(QtCore.QSize(841, 501))
-        self.label_double_1.setObjectName("label_double_1")
-        self.label_double_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_double_2.setGeometry(QtCore.QRect(40, 140, 731, 498))
-        self.label_double_2.setMinimumSize(QtCore.QSize(711, 371))
-        self.label_double_2.setMaximumSize(QtCore.QSize(841, 501))
-        self.label_double_2.setObjectName("label_double_2")
-        self.label_triple_1 = QtWidgets.QLabel(self.centralwidget)
-        self.label_triple_1.setGeometry(QtCore.QRect(40, 140, 731, 498))
-        self.label_triple_1.setMinimumSize(QtCore.QSize(711, 371))
-        self.label_triple_1.setMaximumSize(QtCore.QSize(841, 501))
-        self.label_triple_1.setObjectName("label_triple_1")
-        self.label_triple_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_triple_2.setGeometry(QtCore.QRect(40, 140, 731, 498))
-        self.label_triple_2.setMinimumSize(QtCore.QSize(711, 371))
-        self.label_triple_2.setMaximumSize(QtCore.QSize(841, 501))
-        self.label_triple_2.setObjectName("label_triple_2")
         self.frame_4 = QtWidgets.QFrame(self.centralwidget)
         self.frame_4.setGeometry(QtCore.QRect(830, 440, 531, 171))
         self.frame_4.setFrameShape(QtWidgets.QFrame.StyledPanel)
@@ -1599,6 +1579,26 @@ class Ui_MainWindow(object):
         self.label_x.setGeometry(QtCore.QRect(30, 680, 731, 61))
         self.label_x.setText("")
         self.label_x.setObjectName("label_x")
+        self.label_double_1 = QtWidgets.QLabel(self.centralwidget)
+        self.label_double_1.setGeometry(QtCore.QRect(30, 140, 731, 498))
+        self.label_double_1.setMinimumSize(QtCore.QSize(711, 371))
+        self.label_double_1.setMaximumSize(QtCore.QSize(841, 501))
+        self.label_double_1.setObjectName("label_double_1")
+        self.label_double_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_double_2.setGeometry(QtCore.QRect(30, 150, 731, 498))
+        self.label_double_2.setMinimumSize(QtCore.QSize(711, 371))
+        self.label_double_2.setMaximumSize(QtCore.QSize(841, 501))
+        self.label_double_2.setObjectName("label_double_2")
+        self.label_triple_1 = QtWidgets.QLabel(self.centralwidget)
+        self.label_triple_1.setGeometry(QtCore.QRect(40, 140, 731, 498))
+        self.label_triple_1.setMinimumSize(QtCore.QSize(711, 371))
+        self.label_triple_1.setMaximumSize(QtCore.QSize(841, 501))
+        self.label_triple_1.setObjectName("label_triple_1")
+        self.label_triple_2 = QtWidgets.QLabel(self.centralwidget)
+        self.label_triple_2.setGeometry(QtCore.QRect(970, 300, 731, 498))
+        self.label_triple_2.setMinimumSize(QtCore.QSize(711, 371))
+        self.label_triple_2.setMaximumSize(QtCore.QSize(841, 501))
+        self.label_triple_2.setObjectName("label_triple_2")
         MainWindow.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(MainWindow)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 1414, 21))
@@ -1675,27 +1675,7 @@ class Ui_MainWindow(object):
 "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
 "p, li { white-space: pre-wrap; }\n"
 "</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/open/single.jpg\" /></p></body></html>"))
-        self.label_double_1.setText(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/open/double_1.jpg\" /></p></body></html>"))
-        self.label_double_2.setText(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/open/double_2.jpg\" /></p></body></html>"))
-        self.label_triple_1.setText(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/open/triple-1.jpg\" /></p></body></html>"))
-        self.label_triple_2.setText(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/open/triple-2.jpg\" /></p></body></html>"))
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/open/single.png\" /></p></body></html>"))
         self.pushButton_allplay.setText(_translate("MainWindow", "整句播放"))
         self.pushButton_replay.setText(_translate("MainWindow", "重播"))
         self.pushButton_keep.setText(_translate("MainWindow", "繼續"))
@@ -1733,6 +1713,26 @@ class Ui_MainWindow(object):
 "ㄉ\n"
 "ㄨ\n"
 "ㄛ"))
+        self.label_double_1.setText(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/open/double-1.png\" /></p></body></html>"))
+        self.label_double_2.setText(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/open/double-2.png\" /></p></body></html>"))
+        self.label_triple_1.setText(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/open/triple-1.png\" /></p></body></html>"))
+        self.label_triple_2.setText(_translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:\'PMingLiU\'; font-size:9pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\"><img src=\":/open/triple-2.png\" /></p></body></html>"))
 
 import openone
 
@@ -1742,6 +1742,6 @@ if __name__ == "__main__":
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
-    MainWindow.showMaximized()
+    MainWindow.show()
     sys.exit(app.exec_())
 

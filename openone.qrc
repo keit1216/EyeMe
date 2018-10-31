@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="open">
+    <file>triple-2.png</file>
+    <file>triple-1.png</file>
+    <file>double-2.png</file>
+    <file>double-1.png</file>
+    <file>single.png</file>
+  </qresource>
+</RCC>

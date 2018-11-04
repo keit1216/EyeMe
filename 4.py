@@ -6,6 +6,7 @@
 #
 # WARNING! All changes made in this file will be lost!
 import time,pyodbc
+from playsound import playsound
 from gtts import gTTS
 from pygame import mixer
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -190,20 +191,41 @@ class Ui_MainWindow(object):
             ChineseWordData = cursor.fetchone()
             row = list(ChineseWordData)
             ConvertedRow.append(row[0].rstrip())
-            cnt2=0
-            cnt=4
-            try:
-                for cnt2 in range(0,4):
-                    Voice = ConvertedRow[0] + '0000' + str(cnt)
-                    mixer.init()
-                    mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
-                    cnt-1
-                    break
+            x=0
+            try :
+                Voice = ConvertedRow[0] + '00001'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
             except:
+                x=x+1
+            try:
+                Voice = ConvertedRow[0] + '00002'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
+            except:
+                x = x + 1
+            try:
+                Voice = ConvertedRow[0] + '00003'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
+            except:
+                x = x + 1
+            try:
+                Voice = ConvertedRow[0] + '00004'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
+            except:
+                x = x + 1
+            try:
+                Voice = ConvertedRow[0] + '00000'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
+            except:
+                x = x + 1
+            if x==5:
                 self.warning()
                 self.keep()
                 self.openOneUi()
-
         elif self.label_single2.text() == '進入雙音視窗，請在右側選取需要字：':
             VoiceTwo = [self.label_up_2.text(),self.label_up2_2.text()]
             for cont in range(0, 2):
@@ -211,17 +233,38 @@ class Ui_MainWindow(object):
                 ChineseWordData = cursor.fetchone()
                 row = list(ChineseWordData)
                 ConvertedRow.append(row[0].rstrip())
-
-            cnt2 = 0
-            cnt = 4
+            x = 0
             try:
-                for cnt2 in range(0, 4):
-                    Voice = ConvertedRow[0] +ConvertedRow[1] + '00' + str(cnt)
-                    mixer.init()
-                    mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
-                    cnt - 1
-                    break
+                Voice = ConvertedRow[0] + ConvertedRow[1] + '001'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
             except:
+                x = x + 1
+            try:
+                Voice = ConvertedRow[0] + ConvertedRow[1] + '002'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
+            except:
+                x = x + 1
+            try:
+                Voice = ConvertedRow[0] + ConvertedRow[1] + '003'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
+            except:
+                x = x + 1
+            try:
+                Voice = ConvertedRow[0] + ConvertedRow[1] + '004'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
+            except:
+                x = x + 1
+            try:
+                Voice = ConvertedRow[0] + ConvertedRow[1] + '000'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
+            except:
+                x = x + 1
+            if x == 5:
                 self.warning()
                 self.keep()
                 self.openTwoUi()
@@ -232,16 +275,38 @@ class Ui_MainWindow(object):
                 ChineseWordData = cursor.fetchone()
                 row = list(ChineseWordData)
                 ConvertedRow.append(row[0].rstrip())
-                cnt2 = 0
-                cnt = 4
+            x = 0
             try:
-                for cnt2 in range(0, 4):
-                    Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + str(cnt)
-                    mixer.init()
-                    mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
-                    cnt - 1
-                    break
+                Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '1'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
             except:
+                x = x + 1
+            try:
+                Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '2'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
+            except:
+                x = x + 1
+            try:
+                Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '3'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
+            except:
+                x = x + 1
+            try:
+                Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '4'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
+            except:
+                x = x + 1
+            try:
+                Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '0'
+                mixer.init()
+                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
+            except:
+                x = x + 1
+            if x == 5:
                 self.warning()
                 self.keep()
                 self.openThreeUi()
@@ -331,9 +396,7 @@ class Ui_MainWindow(object):
                 '''
 
             try:
-                mixer.init()
-                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
-                mixer.music.play()
+                playsound('C:\\Users\\ian\\Desktop\\music\\' + Voice + '.mp3')
                 if self.label_x.text() == '':
                     self.label_x.setText(Voice)
                 elif self.label_x.text() != '':
@@ -341,38 +404,36 @@ class Ui_MainWindow(object):
             except Exception:
                 self.warning()
                 if self.label_single2.text() == '進入單音視窗，請在右側選取需要字：':
-                    self.keep()
-                    self.openOneUi()
+                    self.frame_3.show()
+                    self.frame_4.hide()
+                    self.cancel7()
+                    self.openOne()
                 elif self.label_single2.text() == '進入雙音視窗，請在右側選取需要字：':
-                    self.keep()
-                    self.openTwoUi()
+                    self.frame_3.show()
+                    self.frame_4.hide()
+                    self.cancel7()
+                    self.openTwo()
                 elif self.label_single2.text() == '進入三音視窗，請在右側選取需要字：':
-                    self.keep()
-                    self.openThreeUi()
+                    self.frame_3.show()
+                    self.frame_4.hide()
+                    self.cancel7()
+                    self.openThree()
         elif btn.text()=='重播':
             VoiceArr=self.label_x.text()
             VoiceArray=[]
             VoiceArray=VoiceArr.split(",")
             a=0
             for a in range(0,len(VoiceArray)):
-                mixer.init()
-                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + VoiceArray[a] + '.mp3')
-                mixer.music.play()
-                time.sleep(0.6)
-                print(VoiceArray[a])
-                print(VoiceArray)
+                playsound('C:\\Users\\ian\\Desktop\\music\\' + VoiceArray[a] + '.mp3')
+                time.sleep(0.1)
         elif btn.text()=='整句播放':
             VoiceArr = self.label_x.text()
             VoiceArray = []
             VoiceArray = VoiceArr.split(",")
             a = 0
             for a in range(0, len(VoiceArray)):
-                mixer.init()
-                mixer.music.load('C:\\Users\\ian\\Desktop\\music\\' + VoiceArray[a] + '.mp3')
-                mixer.music.play()
-                time.sleep(0.6)
-                print(VoiceArray[a])
-                print(VoiceArray)
+                playsound('C:\\Users\\ian\\Desktop\\music\\' + VoiceArray[a] + '.mp3')
+                time.sleep(0.1)
             self.label_x.setText('')
         self.pushButton_replay.clicked.connect(lambda: self.voice(self.pushButton_replay))
 
@@ -637,6 +698,7 @@ class Ui_MainWindow(object):
 
     # button connect相關
     def openOne(self):
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(//Mac/Home/Downloads//背景色塊.png);}")
         self.pushButton_1.clicked.connect(lambda: self.OneTextSet(self.pushButton_1))
         self.pushButton_2.clicked.connect(lambda: self.OneTextSet(self.pushButton_2))
         self.pushButton_3.clicked.connect(lambda: self.OneTextSet(self.pushButton_3))
@@ -697,6 +759,7 @@ class Ui_MainWindow(object):
         
     # button connect相關
     def openTwo(self):
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(//Mac/Home/Downloads//背景色塊.png);}")
         self.pushButton_1.clicked.connect(lambda: self.OneTextSet(self.pushButton_1))
         self.pushButton_2.clicked.connect(lambda: self.OneTextSet(self.pushButton_2))
         self.pushButton_3.clicked.connect(lambda: self.OneTextSet(self.pushButton_3))
@@ -753,6 +816,7 @@ class Ui_MainWindow(object):
         self.openTwo()
 
     def openThree(self):
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(//Mac/Home/Downloads//背景色塊.png);}")
         self.pushButton_1.clicked.connect(lambda: self.OneTextSet(self.pushButton_1))
         self.pushButton_2.clicked.connect(lambda: self.OneTextSet(self.pushButton_2))
         self.pushButton_3.clicked.connect(lambda: self.OneTextSet(self.pushButton_3))
@@ -813,6 +877,7 @@ class Ui_MainWindow(object):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1414, 810)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(//Mac/Home/Downloads/背景色塊.png);}")
         self.centralwidget.setObjectName("centralwidget")
         self.label_single2 = QtWidgets.QLabel(self.centralwidget)
         self.label_single2.setGeometry(QtCore.QRect(30, 40, 581, 81))
@@ -856,15 +921,17 @@ class Ui_MainWindow(object):
         self.pushButton_37.setFont(font)
         self.pushButton_37.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 25px;\n"
-"    border: 3px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
+"    border-right:4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 25px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_37.setAutoDefault(True)
@@ -898,15 +965,17 @@ class Ui_MainWindow(object):
         self.pushButton_sure.setFont(font)
         self.pushButton_sure.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 25px;\n"
-"    border: 3px solid #FF5964;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 25px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_sure.setAutoDefault(True)
@@ -940,15 +1009,17 @@ class Ui_MainWindow(object):
         self.pushButton_cancel.setFont(font)
         self.pushButton_cancel.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 25px;\n"
-"    border: 3px solid #FF5964;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 25px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_cancel.setAutoDefault(True)
@@ -963,15 +1034,17 @@ class Ui_MainWindow(object):
         self.pushButton_4.setFont(font)
         self.pushButton_4.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 25px;\n"
-"    border: 3px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 25px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_4.setAutoDefault(True)
@@ -986,15 +1059,17 @@ class Ui_MainWindow(object):
         self.pushButton_5.setFont(font)
         self.pushButton_5.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 25px;\n"
-"    border: 3px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 25px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_5.setAutoDefault(True)
@@ -1009,15 +1084,17 @@ class Ui_MainWindow(object):
         self.pushButton_2.setFont(font)
         self.pushButton_2.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 25px;\n"
-"    border: 3px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
+"    border-right: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 25px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_2.setAutoDefault(True)
@@ -1032,15 +1109,17 @@ class Ui_MainWindow(object):
         self.pushButton_3.setFont(font)
         self.pushButton_3.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 25px;\n"
-"    border: 3px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
+"    border-right: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 25px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_3.setAutoDefault(True)
@@ -1055,15 +1134,17 @@ class Ui_MainWindow(object):
         self.pushButton_6.setFont(font)
         self.pushButton_6.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 25px;\n"
-"    border: 3px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 25px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_6.setAutoDefault(True)
@@ -1078,15 +1159,17 @@ class Ui_MainWindow(object):
         self.pushButton_1.setFont(font)
         self.pushButton_1.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 25px;\n"
-"    border: 3px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
+"    border-right: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 25px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_1.setAutoDefault(True)
@@ -1165,15 +1248,17 @@ class Ui_MainWindow(object):
         self.pushButton_allplay.setFont(font)
         self.pushButton_allplay.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 4px solid #FF5964;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 25px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_allplay.setAutoDefault(True)
@@ -1188,15 +1273,17 @@ class Ui_MainWindow(object):
         self.pushButton_replay.setFont(font)
         self.pushButton_replay.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 4px solid #FF5964;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 25px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_replay.setAutoDefault(True)
@@ -1211,15 +1298,17 @@ class Ui_MainWindow(object):
         self.pushButton_keep.setFont(font)
         self.pushButton_keep.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 4px solid #FF5964;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 25px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_keep.setAutoDefault(True)
@@ -1239,15 +1328,17 @@ class Ui_MainWindow(object):
         self.pushButton_five_2.setFont(font)
         self.pushButton_five_2.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 3px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 15px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_five_2.setAutoDefault(True)
@@ -1262,15 +1353,17 @@ class Ui_MainWindow(object):
         self.pushButton_three_2.setFont(font)
         self.pushButton_three_2.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 3px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 2px solid #FFD700;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
+"    border-right: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 15px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_three_2.setAutoDefault(True)
@@ -1285,15 +1378,17 @@ class Ui_MainWindow(object):
         self.pushButton_two_2.setFont(font)
         self.pushButton_two_2.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 3px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 15px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_two_2.setAutoDefault(True)
@@ -1308,15 +1403,17 @@ class Ui_MainWindow(object):
         self.pushButton_four_2.setFont(font)
         self.pushButton_four_2.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 3px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 15px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_four_2.setAutoDefault(True)
@@ -1331,15 +1428,17 @@ class Ui_MainWindow(object):
         self.pushButton_one_2.setFont(font)
         self.pushButton_one_2.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 3px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 15px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_one_2.setAutoDefault(True)
@@ -1462,15 +1561,17 @@ class Ui_MainWindow(object):
         self.pushButton_sure_5.setFont(font)
         self.pushButton_sure_5.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 3px solid #FF5964;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 15px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_sure_5.setAutoDefault(True)
@@ -1485,15 +1586,17 @@ class Ui_MainWindow(object):
         self.pushButton_cancel_7.setFont(font)
         self.pushButton_cancel_7.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 3px solid #FF5964;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 3px; border-style: solid; border-radius: 15px;\n"
+"    border-width: 3px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_cancel_7.setAutoDefault(True)
@@ -1513,15 +1616,17 @@ class Ui_MainWindow(object):
         self.pushButton.setFont(font)
         self.pushButton.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 5px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 5px; border-style: solid; border-radius: 15px;\n"
+"    border-width: 5px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton.setAutoDefault(True)
@@ -1536,15 +1641,17 @@ class Ui_MainWindow(object):
         self.pushButton_7.setFont(font)
         self.pushButton_7.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 5px solid #B4C5E4;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-radius:50px;\n"
+"    border-right: 4px solid #AAAAAA;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"                  
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 5px; border-style: solid; border-radius: 15px;\n"
+"    border-width: 5px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_7.setAutoDefault(True)
@@ -1559,15 +1666,17 @@ class Ui_MainWindow(object):
         self.pushButton_8.setFont(font)
         self.pushButton_8.setStyleSheet("QPushButton\n"
 "{\n"
-"    color : #BD8B9C;\n"
+"    color : #000000;\n"
 "    background-color : #F9F7F3;\n"
-"    border-radius: 15px;\n"
-"    border: 5px solid #B4C5E4;\n"
+"    border-radius: 45px;\n"
+"    border: 3px solid #FFD700;\n"
+"    border-bottom: 4px solid #AAAAAA;\n"
+"    border-right:4px solid #AAAAAA;\n"
 "}\n"
 "QPushButton:focus \n"
 "{\n"
 "    color : #315659;\n"
-"    border-width: 5px; border-style: solid; border-radius: 15px;\n"
+"    border-width: 5px; border-style: solid; border-radius: 45px;\n"
 "    background-color: #F6E27F; \n"
 "}")
         self.pushButton_8.setAutoDefault(True)
@@ -1579,6 +1688,7 @@ class Ui_MainWindow(object):
         self.label_x.setGeometry(QtCore.QRect(30, 680, 731, 61))
         self.label_x.setText("")
         self.label_x.setObjectName("label_x")
+        self.label_x.hide()
         self.label_double_1 = QtWidgets.QLabel(self.centralwidget)
         self.label_double_1.setGeometry(QtCore.QRect(30, 140, 731, 498))
         self.label_double_1.setMinimumSize(QtCore.QSize(711, 371))

@@ -194,8 +194,8 @@ class Ui_MainWindow(object):
 
     def check(self):
 
-        server = 'IAN6C1E'
-        database = 'EYEME'
+        server = 'DESKTOP-9G62UKP'
+        database = 'master'
         username = 'sa'
         password = '123'
         cnxn = pyodbc.connect(
@@ -351,8 +351,8 @@ class Ui_MainWindow(object):
         self.label_choose2.hide()
 
         # connect資料庫
-        server = 'IAN6C1E'
-        database = 'EYEME'
+        server = 'DESKTOP-9G62UKP'
+        database = 'master'
         username = 'sa'
         password = '123'
         cnxn = pyodbc.connect(
@@ -746,7 +746,7 @@ class Ui_MainWindow(object):
 
     # button connect相關
     def openOne(self):
-        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/python/background.png);}")  # 修改
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/background.png);}")  # 修改
         self.pushButton_1.clicked.connect(lambda: self.OneTextSet(self.pushButton_1))
         self.pushButton_2.clicked.connect(lambda: self.OneTextSet(self.pushButton_2))
         self.pushButton_3.clicked.connect(lambda: self.OneTextSet(self.pushButton_3))
@@ -805,7 +805,7 @@ class Ui_MainWindow(object):
 
     # button connect相關
     def openTwo(self):
-        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/python/background.png);}")  # 修改
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/background.png);}")  # 修改
         self.pushButton_1.clicked.connect(lambda: self.OneTextSet(self.pushButton_1))
         self.pushButton_2.clicked.connect(lambda: self.OneTextSet(self.pushButton_2))
         self.pushButton_3.clicked.connect(lambda: self.OneTextSet(self.pushButton_3))
@@ -841,14 +841,14 @@ class Ui_MainWindow(object):
         self.pushButton_keep.clicked.connect(self.keep)
 
     def opensexual(self):
-        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/python/background.png);}")  # 修改
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/background.png);}")  # 修改
         self.frame_5.show()
         self.label_eye.hide()
         self.label_title.hide()
         self.pushButton_start.hide()
 
     def openchoosepage(self):
-        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/python/background.png);}")  # 修改
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/background.png);}")  # 修改
         self.frame_5.hide()
         self.frame_2.show()
         self.label_gender2.show()
@@ -877,7 +877,7 @@ class Ui_MainWindow(object):
         self.openTwo()
 
     def openThree(self):
-        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/python/background.png);}")  # 修改
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/background.png);}")  # 修改
         self.label_gender2.hide()
         self.pushButton_1.clicked.connect(lambda: self.OneTextSet(self.pushButton_1))
         self.pushButton_2.clicked.connect(lambda: self.OneTextSet(self.pushButton_2))
@@ -937,7 +937,7 @@ class Ui_MainWindow(object):
         self.openThree()
 
     def setupUi(self, MainWindow):
-        MainWindow.setStyleSheet("#MainWindow{background-image:url(C:/Users/user/Desktop/專題/介面.png);}")
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/介面.png);}")
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1414, 810)
         self.centralwidget = QtWidgets.QWidget(MainWindow)
@@ -1893,7 +1893,7 @@ class Ui_MainWindow(object):
         self.label_choose1.setFont(font)
         self.label_choose1.setObjectName("label_choose1")
         self.label_choose2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_choose2.setGeometry(QtCore.QRect(760, 260, 681, 41))
+        self.label_choose2.setGeometry(QtCore.QRect(760, 130, 681, 41))
         font = QtGui.QFont()
         font.setFamily("微軟正黑體")
         font.setPointSize(24)

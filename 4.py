@@ -194,8 +194,8 @@ class Ui_MainWindow(object):
 
     def check(self):
 
-        server = 'DESKTOP-9G62UKP'
-        database = 'master'
+        server = 'DESKTOP-J1A58LR\SQLEXPRESS'
+        database = 'EYEME'
         username = 'sa'
         password = '123'
         cnxn = pyodbc.connect(
@@ -351,8 +351,8 @@ class Ui_MainWindow(object):
         self.label_choose2.hide()
 
         # connect資料庫
-        server = 'DESKTOP-9G62UKP'
-        database = 'master'
+        server = 'DESKTOP-J1A58LR\SQLEXPRESS'
+        database = 'EYEME'
         username = 'sa'
         password = '123'
         cnxn = pyodbc.connect(
@@ -1292,7 +1292,7 @@ class Ui_MainWindow(object):
         self.label_right_2.setFont(font)
         self.label_right_2.setObjectName("label_right_2")
         self.label_single = QtWidgets.QLabel(self.centralwidget)
-        self.label_single.setGeometry(QtCore.QRect(30, 140, 731, 498))
+        self.label_single.setGeometry(QtCore.QRect(30, 160, 771, 498))
         self.label_single.setMinimumSize(QtCore.QSize(711, 371))
         self.label_single.setMaximumSize(QtCore.QSize(841, 501))
         self.label_single.setObjectName("label_single")
@@ -1753,22 +1753,22 @@ class Ui_MainWindow(object):
         self.label_x.setObjectName("label_x")
         self.label_x.hide()
         self.label_double_1 = QtWidgets.QLabel(self.centralwidget)
-        self.label_double_1.setGeometry(QtCore.QRect(30, 140, 731, 498))
+        self.label_double_1.setGeometry(QtCore.QRect(30, 160, 771, 498))
         self.label_double_1.setMinimumSize(QtCore.QSize(711, 371))
         self.label_double_1.setMaximumSize(QtCore.QSize(841, 501))
         self.label_double_1.setObjectName("label_double_1")
         self.label_double_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_double_2.setGeometry(QtCore.QRect(30, 150, 731, 498))
+        self.label_double_2.setGeometry(QtCore.QRect(30, 160, 771, 498))
         self.label_double_2.setMinimumSize(QtCore.QSize(711, 371))
         self.label_double_2.setMaximumSize(QtCore.QSize(841, 501))
         self.label_double_2.setObjectName("label_double_2")
         self.label_triple_1 = QtWidgets.QLabel(self.centralwidget)
-        self.label_triple_1.setGeometry(QtCore.QRect(40, 140, 731, 498))
+        self.label_triple_1.setGeometry(QtCore.QRect(30, 160, 771, 498))
         self.label_triple_1.setMinimumSize(QtCore.QSize(711, 371))
         self.label_triple_1.setMaximumSize(QtCore.QSize(841, 501))
         self.label_triple_1.setObjectName("label_triple_1")
         self.label_triple_2 = QtWidgets.QLabel(self.centralwidget)
-        self.label_triple_2.setGeometry(QtCore.QRect(30, 140, 731, 498))
+        self.label_triple_2.setGeometry(QtCore.QRect(30, 160, 771, 498))
         self.label_triple_2.setMinimumSize(QtCore.QSize(711, 371))
         self.label_triple_2.setMaximumSize(QtCore.QSize(841, 501))
         self.label_triple_2.setObjectName("label_triple_2")

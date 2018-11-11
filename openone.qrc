@@ -1,5 +1,6 @@
 <RCC>
   <qresource prefix="open">
+    <file>boy.png</file>
     <file>triple-2.png</file>
     <file>triple-1.png</file>
     <file>double-2.png</file>

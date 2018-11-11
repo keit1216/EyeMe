@@ -14,7 +14,6 @@ from PyQt5.QtWidgets import QMessageBox
 
 
 class Ui_MainWindow(object):
-
     def getValue(self, btn):
         try:
             btn.clicked.disconnect()
@@ -195,8 +194,8 @@ class Ui_MainWindow(object):
 
     def check(self):
 
-        server = 'DESKTOP-9G62UKP'
-        database = 'master'
+        server = 'IAN6C1E'
+        database = 'EYEME'
         username = 'sa'
         password = '123'
         cnxn = pyodbc.connect(
@@ -214,31 +213,31 @@ class Ui_MainWindow(object):
             try:
                 Voice = ConvertedRow[0] + '00001'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + '00002'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + '00003'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + '00004'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + '00000'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             if x == 5:
@@ -257,31 +256,31 @@ class Ui_MainWindow(object):
             try:
                 Voice = ConvertedRow[0] + ConvertedRow[1] + '001'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + ConvertedRow[1] + '002'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + ConvertedRow[1] + '003'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + ConvertedRow[1] + '004'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + ConvertedRow[1] + '000'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             if x == 5:
@@ -299,31 +298,31 @@ class Ui_MainWindow(object):
             try:
                 Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '1'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '2'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '3'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '4'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '0'
                 mixer.init()
-                mixer.music.load('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                mixer.music.load('D:\\music\\' + Voice + '.mp3')
             except:
                 x = x + 1
             if x == 5:
@@ -352,8 +351,8 @@ class Ui_MainWindow(object):
         self.label_choose2.hide()
 
         # connect資料庫
-        server = 'DESKTOP-9G62UKP'
-        database = 'master'
+        server = 'IAN6C1E'
+        database = 'EYEME'
         username = 'sa'
         password = '123'
         cnxn = pyodbc.connect(
@@ -420,7 +419,7 @@ class Ui_MainWindow(object):
                 '''
 
             try:
-                playsound('C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + Voice + '.mp3')
+                playsound('D:\\music\\' + Voice + '.mp3')
                 if self.label_x.text() == '':
                     self.label_x.setText(Voice)
                 elif self.label_x.text() != '':
@@ -454,8 +453,7 @@ class Ui_MainWindow(object):
             a = 0
             for a in range(0, len(VoiceArray)):
                 mixer.init()
-                mixer.music.load(
-                    'C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + VoiceArray[a] + '.mp3')
+                mixer.music.load('D:\\music\\' + VoiceArray[a] + '.mp3')
                 mixer.music.play()
                 time.sleep(0.6)
                 print(VoiceArray[a])
@@ -467,31 +465,13 @@ class Ui_MainWindow(object):
             a = 0
             for a in range(0, len(VoiceArray)):
                 mixer.init()
-                mixer.music.load(
-                    'C:\\Users\\user\\Downloads\\music-20181103T140309Z-001\\music\\' + VoiceArray[a] + '.mp3')
+                mixer.music.load('D:\\music\\' + VoiceArray[a] + '.mp3')
                 mixer.music.play()
                 time.sleep(0.6)
                 print(VoiceArray[a])
                 print(VoiceArray)
             self.label_x.setText('')
         self.pushButton_replay.clicked.connect(lambda: self.voice(self.pushButton_replay))
-
-    '''
-    def sure5(self):
-        try:
-            self.pushButton_sure_5.clicked.disconnect()
-        except:
-            pass
-        self.pushButton_one_2.hide()
-        self.pushButton_two_2.hide()
-        self.pushButton_three_2.hide()
-        self.pushButton_four_2.hide()
-        self.pushButton_five_2.hide()
-        self.pushButton_sure_5.hide()
-        self.pushButton_cancel_7.hide()
-
-        self.frame_4.show()
-    '''
 
     def cancel7(self):
         self.label_sound_2.setText('')
@@ -766,6 +746,7 @@ class Ui_MainWindow(object):
 
     # button connect相關
     def openOne(self):
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/python/background.png);}")  # 修改
         self.pushButton_1.clicked.connect(lambda: self.OneTextSet(self.pushButton_1))
         self.pushButton_2.clicked.connect(lambda: self.OneTextSet(self.pushButton_2))
         self.pushButton_3.clicked.connect(lambda: self.OneTextSet(self.pushButton_3))
@@ -824,6 +805,7 @@ class Ui_MainWindow(object):
 
     # button connect相關
     def openTwo(self):
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/python/background.png);}")  # 修改
         self.pushButton_1.clicked.connect(lambda: self.OneTextSet(self.pushButton_1))
         self.pushButton_2.clicked.connect(lambda: self.OneTextSet(self.pushButton_2))
         self.pushButton_3.clicked.connect(lambda: self.OneTextSet(self.pushButton_3))
@@ -859,13 +841,14 @@ class Ui_MainWindow(object):
         self.pushButton_keep.clicked.connect(self.keep)
 
     def opensexual(self):
-        MainWindow.setStyleSheet("#MainWindow{background-image:url(C:/Users/user/Desktop/專題/背景色塊.png);}")
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/python/background.png);}")  # 修改
         self.frame_5.show()
         self.label_eye.hide()
         self.label_title.hide()
         self.pushButton_start.hide()
 
     def openchoosepage(self):
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/python/background.png);}")  # 修改
         self.frame_5.hide()
         self.frame_2.show()
         self.label_gender2.show()
@@ -894,6 +877,7 @@ class Ui_MainWindow(object):
         self.openTwo()
 
     def openThree(self):
+        MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/python/background.png);}")  # 修改
         self.label_gender2.hide()
         self.pushButton_1.clicked.connect(lambda: self.OneTextSet(self.pushButton_1))
         self.pushButton_2.clicked.connect(lambda: self.OneTextSet(self.pushButton_2))
@@ -2118,6 +2102,6 @@ if __name__ == "__main__":
     MainWindow = QtWidgets.QMainWindow()
     ui = Ui_MainWindow()
     ui.setupUi(MainWindow)
-    MainWindow.show()
+    MainWindow.showMaximized()
     sys.exit(app.exec_())
 

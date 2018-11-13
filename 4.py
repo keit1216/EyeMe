@@ -192,9 +192,13 @@ class Ui_MainWindow(object):
         msgBox = QMessageBox(QMessageBox.NoIcon, '警告', '輸入錯誤請重新選擇!')
         msgBox.exec()
 
+   # def VoiceType(self,btn):
+
+
+
     def check(self):
 
-        server = 'DESKTOP-J1A58LR\SQLEXPRESS'
+        server = 'IAN6C1E'
         database = 'EYEME'
         username = 'sa'
         password = '123'
@@ -211,33 +215,49 @@ class Ui_MainWindow(object):
             ConvertedRow.append(row[0].rstrip())
             x = 0
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
+                print(VoiceArray)
                 Voice = ConvertedRow[0] + '00001'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + '00002'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + '00003'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + '00004'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + '00000'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             if x == 5:
@@ -254,33 +274,45 @@ class Ui_MainWindow(object):
                 ConvertedRow.append(row[0].rstrip())
             x = 0
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + ConvertedRow[1] + '001'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             try:
                 Voice = ConvertedRow[0] + ConvertedRow[1] + '002'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + ConvertedRow[1] + '003'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + ConvertedRow[1] + '004'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + ConvertedRow[1] + '000'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             if x == 5:
@@ -296,33 +328,48 @@ class Ui_MainWindow(object):
                 ConvertedRow.append(row[0].rstrip())
             x = 0
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '1'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '2'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '3'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '4'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             try:
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
                 Voice = ConvertedRow[0] + ConvertedRow[1] + ConvertedRow[2] + '0'
                 mixer.init()
-                mixer.music.load('D:\\music\\' + Voice + '.mp3')
+                mixer.music.load(VoiceArray[0] + Voice + '.wav')
             except:
                 x = x + 1
             if x == 5:
@@ -351,7 +398,7 @@ class Ui_MainWindow(object):
         self.label_choose2.hide()
 
         # connect資料庫
-        server = 'DESKTOP-J1A58LR\SQLEXPRESS'
+        server = 'IAN6C1E'
         database = 'EYEME'
         username = 'sa'
         password = '123'
@@ -419,7 +466,10 @@ class Ui_MainWindow(object):
                 '''
 
             try:
-                playsound('D:\\music\\' + Voice + '.mp3')
+                VoiceArr = self.label_x.text()
+                VoiceArray = []
+                VoiceArray = VoiceArr.split(",")
+                playsound(VoiceArray[0]+ Voice + '.wav')
                 if self.label_x.text() == '':
                     self.label_x.setText(Voice)
                 elif self.label_x.text() != '':
@@ -453,11 +503,9 @@ class Ui_MainWindow(object):
             a = 0
             for a in range(0, len(VoiceArray)):
                 mixer.init()
-                mixer.music.load('D:\\music\\' + VoiceArray[a] + '.mp3')
+                mixer.music.load(VoiceArray[0] + VoiceArray[a+1] + '.wav')
                 mixer.music.play()
                 time.sleep(0.6)
-                print(VoiceArray[a])
-                print(VoiceArray)
         elif btn.text() == '整句播放':
             VoiceArr = self.label_x.text()
             VoiceArray = []
@@ -465,7 +513,7 @@ class Ui_MainWindow(object):
             a = 0
             for a in range(0, len(VoiceArray)):
                 mixer.init()
-                mixer.music.load('D:\\music\\' + VoiceArray[a] + '.mp3')
+                mixer.music.load(VoiceArray[0] + VoiceArray[a+1] + '.wav')
                 mixer.music.play()
                 time.sleep(0.6)
                 print(VoiceArray[a])
@@ -847,12 +895,21 @@ class Ui_MainWindow(object):
         self.label_title.hide()
         self.pushButton_start.hide()
 
-    def openchoosepage(self):
+    def openchoosepage(self,btn):
+        try:
+            btn.clicked.disconnect()
+        except:
+            pass
         MainWindow.setStyleSheet("#MainWindow{background-image:url(D:/secondPIC.png);}")  # 修改
         self.frame_5.hide()
         self.frame_2.show()
         self.label_gender2.show()
-
+        print(btn.text())
+        if btn.text()=='男性':
+            self.label_x.setText("D:\\ManSound\\,")
+            print(self.label_x.text())
+        elif btn.text()=='女性':
+            self.label_x.setText("D:\\WomanSound\\,")
     # hide show enable相關
     def openTwoUi(self):
         self.label_gender2.hide()
@@ -1951,8 +2008,8 @@ class Ui_MainWindow(object):
         self.pushButton_7.clicked.connect(self.openTwoUi)
         self.pushButton_8.clicked.connect(self.openThreeUi)
         self.pushButton_start.clicked.connect(self.opensexual)
-        self.pushButton_Boy.clicked.connect(self.openchoosepage)
-        self.pushButton_Girl.clicked.connect(self.openchoosepage)
+        self.pushButton_Boy.clicked.connect(lambda: self.openchoosepage(self.pushButton_Boy))
+        self.pushButton_Girl.clicked.connect(lambda: self.openchoosepage(self.pushButton_Girl))
 
         self.retranslateUi(MainWindow)
         QtCore.QMetaObject.connectSlotsByName(MainWindow)

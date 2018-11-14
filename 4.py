@@ -189,8 +189,16 @@ class Ui_MainWindow(object):
             self.check()
 
     def warning(self):
-        msgBox = QMessageBox(QMessageBox.NoIcon, '警告', '輸入錯誤請重新選擇!')
-        msgBox.exec()
+
+        #msgBox = QMessageBox(QMessageBox, '警告', '輸入錯誤請重新選擇!')
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Critical)
+        msg.setText("輸入錯誤請重新選擇")
+        msg.setWindowTitle("警告")
+        msg.setStyleSheet("QLabel{font-size:25px;}");
+
+        #msg.setStyleSheet("QLabel{min-width:100 px; font-size: 24px;} QPushButton{ width:100; font-size: 18px; }");
+        msg.exec()
 
    # def VoiceType(self,btn):
 

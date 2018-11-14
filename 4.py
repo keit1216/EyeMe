@@ -509,23 +509,24 @@ class Ui_MainWindow(object):
             VoiceArray = []
             VoiceArray = VoiceArr.split(",")
             a = 0
+            print(VoiceArray)
             for a in range(0, len(VoiceArray)):
-                mixer.init()
-                mixer.music.load(VoiceArray[0] + VoiceArray[a+1] + '.wav')
-                mixer.music.play()
-                time.sleep(0.6)
+                try:
+                    playsound(VoiceArray[0] + VoiceArray[a+1] + '.wav')
+                    time.sleep(0.6)
+                except:
+                    pass
         elif btn.text() == '整句播放':
             VoiceArr = self.label_x.text()
             VoiceArray = []
             VoiceArray = VoiceArr.split(",")
             a = 0
             for a in range(0, len(VoiceArray)):
-                mixer.init()
-                mixer.music.load(VoiceArray[0] + VoiceArray[a+1] + '.wav')
-                mixer.music.play()
-                time.sleep(0.6)
-                print(VoiceArray[a])
-                print(VoiceArray)
+                try:
+                    playsound(VoiceArray[0] + VoiceArray[a+1] + '.wav')
+                    time.sleep(0.6)
+                except:
+                    pass
             self.label_x.setText('')
         self.pushButton_replay.clicked.connect(lambda: self.voice(self.pushButton_replay))
 
@@ -914,10 +915,10 @@ class Ui_MainWindow(object):
         self.label_gender2.show()
         print(btn.text())
         if btn.text()=='男性':
-            self.label_x.setText("D:\\ManSound\\,")
+            self.label_x.setText("D:\\ManSound\\")
             print(self.label_x.text())
         elif btn.text()=='女性':
-            self.label_x.setText("D:\\WomanSound\\,")
+            self.label_x.setText("D:\\WomanSound\\")
     # hide show enable相關
     def openTwoUi(self):
         self.label_gender2.hide()

@@ -527,7 +527,9 @@ class Ui_MainWindow(object):
                     time.sleep(0.6)
                 except:
                     pass
+
             self.label_x.setText('')
+            self.label_x.setText(VoiceArray[0])
         self.pushButton_replay.clicked.connect(lambda: self.voice(self.pushButton_replay))
 
     def cancel7(self):

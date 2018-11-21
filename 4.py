@@ -508,14 +508,11 @@ class Ui_MainWindow(object):
             VoiceArr = self.label_x.text()
             VoiceArray = []
             VoiceArray = VoiceArr.split(",")
-            a = 0
-            print(VoiceArray)
-            for a in range(0, len(VoiceArray)):
-                try:
-                    playsound(VoiceArray[0] + VoiceArray[a+1] + '.wav')
-                    time.sleep(0.6)
-                except:
-                    pass
+            b = len(VoiceArray)-1
+            try:
+                playsound(VoiceArray[0]+VoiceArray[b] + '.wav')
+            except:
+                pass
         elif btn.text() == '整句播放':
             VoiceArr = self.label_x.text()
             VoiceArray = []
